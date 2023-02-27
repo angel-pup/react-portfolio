@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.74a71c0c.css",
-    "main.js": "/react-portfolio/static/js/main.59cda223.js",
+    "main.css": "/react-portfolio/static/css/main.d42a84da.css",
+    "main.js": "/react-portfolio/static/js/main.6c2f5879.js",
+    "static/media/me.png": "/react-portfolio/static/media/me.630424b5f3aed718a91c.png",
+    "static/media/tech_blog.png": "/react-portfolio/static/media/tech_blog.187b2b65a76467c46609.png",
+    "static/media/social_network_api.png": "/react-portfolio/static/media/social_network_api.45fc802b4773744049c7.png",
+    "static/media/e_commerce_back_end.png": "/react-portfolio/static/media/e_commerce_back_end.03af0bd207519e30b8fc.png",
+    "static/media/Vess_Stewart_Resume.pdf": "/react-portfolio/static/media/Vess_Stewart_Resume.9c817081188280cf48c7.pdf",
     "index.html": "/react-portfolio/index.html",
-    "main.74a71c0c.css.map": "/react-portfolio/static/css/main.74a71c0c.css.map",
-    "main.59cda223.js.map": "/react-portfolio/static/js/main.59cda223.js.map"
+    "main.d42a84da.css.map": "/react-portfolio/static/css/main.d42a84da.css.map",
+    "main.6c2f5879.js.map": "/react-portfolio/static/js/main.6c2f5879.js.map"
   },
   "entrypoints": [
-    "static/css/main.74a71c0c.css",
-    "static/js/main.59cda223.js"
+    "static/css/main.d42a84da.css",
+    "static/js/main.6c2f5879.js"
   ]
 }
