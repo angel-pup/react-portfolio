@@ -1,40 +1,54 @@
+import React from "react";
+
 const Nav = ({ currentPage, setCurrentPage }) => {
     const modContent = (target) => {
-        document.querySelector(`#nav-${target}`).classList.add('is-active');
-        document.querySelector(`#nav-${currentPage}`).classList.remove('is-active');
+        const lastPage = document.querySelector(`#nav-${currentPage}`);
+        const targetPage = document.querySelector(`#nav-${target}`);
+        if(targetPage) 
+            targetPage.classList.add('is-active');
+        if(lastPage)
+            lastPage.classList.remove('is-active');
         setCurrentPage(target);
     }
 
+    const [isActive, setIsActive] = React.useState(false);
+
     return (
         <div>
-            <nav class="navbar is-info has-text-white" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <p class="navbar-item has-text-black">
+            <nav className="navbar is-info" role="navigation" aria-label="main navigation">
+                <div className="navbar-brand">
+                    <p className="navbar-item has-text-black">
                         Vess {currentPage}
                     </p>
 
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <a
+                        role="button"
+                        className={`navbar-burger burger ${isActive ? 'is-active': ""}`}
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navBarElements"
+                        onClick={() => setIsActive(!isActive)}
+                    >
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
                 </div>
 
-                <div id="navBarElements" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a id="nav-AboutMe" class="navbar-item is-active" onClick={() => modContent('AboutMe')}>
+                <div id="navBarElements" className={`navbar-menu ${isActive ? 'is-active': ""}`}>
+                    <div className="navbar-end">
+                        <a id="nav-AboutMe" className="navbar-item has-text-black is-active" onClick={() => modContent('AboutMe')}>
                             About Me
                         </a>
-
-                        <a id="nav-Portfolio" class="navbar-item" onClick={() => modContent('Portfolio')}>
+                        <a id="nav-Portfolio" className="navbar-item has-text-black" onClick={() => modContent('Portfolio')}>
                             Portfolio
                         </a>
 
-                        <a id="nav-Resume" class="navbar-item" onClick={() => modContent('Resume')}>
+                        <a id="nav-Resume" className="navbar-item has-text-black" onClick={() => modContent('Resume')}>
                             Resume
                         </a>
 
-                        <a id="nav-Contact" class="navbar-item" onClick={() => modContent('Contact')}>
+                        <a id="nav-Contact" className="navbar-item has-text-black" onClick={() => modContent('Contact')}>
                             Contact
                         </a>
                     </div>
